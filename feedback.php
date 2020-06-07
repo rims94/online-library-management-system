@@ -63,27 +63,24 @@ if (isset($_POST['submit'])) {
     
     <title>Feedback</title>
 </head>
-<body>
-
-    
-        <div class="header position-relative p-2 text-center d-flex justify-content-center align-items-center"><h4>If you have any query or suggestion,<br>feel free to share with us !</h4></div>
-        <div class="feedback form-group position-relative d-flex flex-row justify-content-center align-items-center">
+<body style="height:100vh; width: 100vw;" class="text-center">
+    <div class="feedback-form border-0 rounded-top rounded-bottom shadow rounded bg-grey h-75 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 7.5%;">
+    <div class="header"><h4>Contact us !</h4></div>
         <form method="post">
-            <div class="email">
-                <label for="email">Email : </label>
-                <input type="email" name="email" id="email" placeholder="Your mail id" class="form-control" required>
+            <div class="email form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
+                <label for="email" class="w-25">Email : </label>
+                <input type="email" name="email" id="email" placeholder="Your mail id" class="form-control w-50 text-center" style="z-index: -1;" required>
             </div>
-            <div class="message">
-                <label for="story">Tell us your story:</label>
-                <textarea id="story" name="story" rows="5" cols="33" class="form-control" required></textarea>
+            <div class="message form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
+                <label for="story" class="w-25">Tell us your story:</label>
+                <textarea id="story" name="story" rows="5" cols="33" class="form-control w-50 text-center" style="z-index: -1;" required></textarea>
             </div>
-            <div class="submit">
-                <button type="submit" name="submit" id="submit" class="btn btn-block btn-primary">
+            <div class="submit form-group">
+                <button type="submit" name="submit" id="submit" class="btn btn-lg btn-primary">
                     <span>Post</span><span><i class="fas fa-paper-plane"></i></span>
                 </button>
             </div>
         </form>
     </div>
-    
 </body>
 </html>

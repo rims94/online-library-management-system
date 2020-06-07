@@ -14,7 +14,7 @@ session_start();
   <!--Google font-->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
   <!-- my stylesheet -->
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/style.css" type="text/css"> 
 </head>
 <body>
   <nav>
@@ -44,6 +44,11 @@ session_start();
         </li>
         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> LogOut</a></li>
       <?php
+      } else if(isset($_SESSION['admin'])){
+      ?>
+        <li><a href="update_student.php">Update</a></li>
+        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> LogOut</a></li>
+      <?php
       } else {
       ?>
         <li><a href="signup.php">SignUp</a></li>
@@ -66,24 +71,24 @@ session_start();
       if(isset($_SESSION['user'])) {
       ?>
       
-      <div class="admin text-right">
-          <a href="admin_login.php" class="bg-warning text-primary">To log in as an Admin, Click here !</a>
+      <div class="admin float-right">
+          <a href="admin_login.php" class="bg-warning text-primary" style="text-decoration: none;">To log in as an Admin, Click here !</a>
       </div>
       <?php
       } else if(isset($_SESSION['admin'])) {
         ?>
-      <div class="admin text-right">
-          <a href="admin_login.php" class="bg-warning text-primary">To log in as a Student, Click here !</a>
+      <div class="student float-right">
+          <a href="login.php" class="bg-warning text-primary" style="text-decoration: none;">To log in as a Student, Click here !</a>
       </div>
       <?php
       } else {
         ?>
-        <div class="login d-flex justify-content-between">
-          <div class="admin">
-            <a href="admin_login.php" class="bg-warning text-primary">To log in as an Admin, Click here !</a>
+        <div class="login">
+          <div class="admin float-left">
+            <a href="admin_login.php" class="bg-warning text-primary" style="text-decoration: none;">To log in as an Admin, Click here !</a>
           </div>
-          <div class="admin">
-            <a href="login.php" class="bg-warning text-primary">To log in as a Student, Click here !</a>
+          <div class="student float-right">
+            <a href="login.php" class="bg-warning text-primary" style="text-decoration: none;">To log in as a Student, Click here !</a>
           </div>
         </div>
         <?php

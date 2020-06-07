@@ -18,18 +18,21 @@ include "navbar.php";
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     
-     <!--Google font-->
+    <!--Font awesome library-->
+    <script src="https://kit.fontawesome.com/9963ef9d00.js" crossorigin="anonymous"></script>
+    
+    <!--Google font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Special+Elite&display=swap" rel="stylesheet">
     
     
     <title>Online Library Management System</title>
 </head>
-<body>
+<body style="height: 100vh; width: 100vw;" class="text-center">
 
     
     <!-- Carousel -->
 
-    <div id="demo" class="carousel slide" data-ride="carousel">
+    <div id="demo" class="carousel slide h-75 position-relative d-flex flex-column justify-content-center align-items-center w-75" style="top: 10%; left: 12.5%;" data-ride="carousel">
 
         
         <!-- Indicators -->
@@ -67,16 +70,16 @@ include "navbar.php";
 
 
 
-<footer>
-        <div class="footer position-relative d-flex flex-column justify-content-center align-items-center">
-            <div class="social-media position-relative m-3">
-                <a href="https://www.facebook.com/sayanghosh3121994" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/imsaayaan" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                <a href="https://in.linkedin.com/in/sayan-ghosh-32a818105" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://github.com/rims94" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.freecodecamp.org/sayanghosh" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+<footer class="p-2 bg-warning position-relative d-flex flex-column justify-content-center align-items-center w-100" style="height:30vh; top: 20%;">
+        <div class="footer">
+            <div class="social-media d-flex justify-content-around m-3" style="font-size: 32px;">
+                <a href="https://www.facebook.com/sayanghosh3121994" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/imsaayaan" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://in.linkedin.com/in/sayan-ghosh-32a818105" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/rims94" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="https://www.freecodecamp.org/sayanghosh" target="_blank"><i class="fa fa-free-code-camp"></i></a>
             </div>
-            <div class="contact position-relative text-center">
+            <div class="contact">
                 <h4>Email us at : <strong><em>saayaanghosh@gmail.com</em></strong></h4>
                 <h5>or, Call us at : <strong><em>+919609241666</em></strong></h5>
             </div>

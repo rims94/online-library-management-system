@@ -7,10 +7,7 @@
 }
 
 /**for navigation bar**/
-html,
-body {
-  height: 100%
-}
+
 
 body {
 	
@@ -59,7 +56,7 @@ a:active, a:focus {
   }
 
 .nav-links li:hover {
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
 
 .burger {
@@ -136,100 +133,9 @@ a:active, a:focus {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.login div a {
-	width: 100vw;
-	text-decoration: none;
-	color: #e6e1e1;
+::-webkit-scrollbar {
+	display: none;
 }
-
-
-
-
-/*for login page*/
-
-.form-container {
-	position: absolute;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 18vh;
-	left: 102vh;
-	z-index: 1;
-}
-
-.form-container .form {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: #ffebcd;
-	height: 75vh;
-	width: 70vh;
-	border: 1px solid black;
-	border-radius: 36px 9px 36px 9px;
-	font-family: 'Special Elite', cursive;
-	top: 0;
-}
-
-.form-container .form .header { 
-	position: absolute;
-	top: 0;
-}
-.form-container .form .header h1 {
-	font-weight: 900;
-}
-.form-container .form-username  { 
-	position: relative;
-	bottom: 5%;
-}
-.form-container .form-login  { 
-	position: absolute;
-	bottom: 40px;
-}
-
-/*for signup page*/
-@media screen and (max-width: 900px) {
-	.form-container {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		left: 50%;
-		z-index: -1;
-	}
-
-	.form-container .form {
-		display: flex;
-	}
-
-	.form-container .form .header h1 {
-		font-weight: 500;
-	}
-	.form-container .form .row {
-		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-	}
-	.form-container .form .row .col-md-6 {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-
-	.form-container .form .row .col-md-6 label {
-		position: relative;
-		left: 0;
-	}
-	.form-container .form .row .col-md-6 .form-control {
-		position: relative;
-		left: 10%;
-	}
-	.form-container .form-login  { 
-		position: absolute;
-		bottom: 10px;
-	}
-}
-
 
 /*   design for books page    */
 
@@ -254,45 +160,4 @@ a:active, a:focus {
 }
 
 
-.carousel {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
-	width: 961px;
-	height: 500px;
-	z-index: -1;
-}
 
-.carousel .carousel-inner img {
-	width: 100%;
-}
-
-
-footer {
-	position: relative;
-	top: 20vh;
-    font-family: 'Special Elite', cursive;
-    font-weight: 900;
-	background-color: #5d5d5a;
-	color: #e6e1e1;
-	height: 30vh;
-	z-index: -1;
-	letter-spacing: 3px;
-}
-
-
-
-footer .footer .social-media a {
-    color: #e6e1e1;
-    padding: 10px;
-    font-size: 30px;
-}
-
-footer .footer .social-media a i:hover {
-	font-size: 130%;
-}
-
-footer .footer .contact strong:hover {
-	font-size: 120%;
-}
