@@ -72,39 +72,39 @@
     <script src="https://kit.fontawesome.com/9963ef9d00.js" crossorigin="anonymous"></script>
     <title>Sign UP</title>
 </head>
-<body style="height: 100vh; width: 100vw;" class="text-center">
-    <div class="border-0 rounded-top rounded-bottom shadow rounded bg-grey form-container h-125 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 7.5%;">
+<body style="height: 100vh; width: 100vw; background-image: url('carousel/sign_in.jpg')" class="text-center">
+    <div class="border rounded border-light text-light form-container h-125 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 7.5%; background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
         <form class="form" action="" method="post">
             <div class="header"><h1>Sign Up Here</h1></div>
                         
             <div class="form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="firstname" class="w-25" >First Name :</label>
-                <input type="text" style="z-index: -1;" name="firstname" id="firstname" class="form-control w-50 text-center" placeholder="firstname" required>
+                <input type="text" name="firstname" id="firstname" class="form-control w-50 text-center" placeholder="firstname" required>
             </div>  
 
             <div class="form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="laststname" class="w-25" >Last Name :</label>
-                <input type="text" style="z-index: -1;" name="lastname" id="lastname" class="form-control w-50 text-center" placeholder="lastname" required>
+                <input type="text" name="lastname" id="lastname" class="form-control w-50 text-center" placeholder="lastname" required>
             </div>
 
             <div class="form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="email" class="w-25" >Email :</label>
-                <input type="email" class="email form-control w-50 text-center" style="z-index: -1;" name="email" id="email" placeholder="email" required>
+                <input type="email" class="email form-control w-50 text-center" name="email" id="email" placeholder="email" required>
             </div>
             
             <div class="form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="mobile" class="w-25" >Phone No. :</label>
-                <input type="tel" style="z-index: -1;" name="mobile" id="mobile" class="form-control w-50 text-center" placeholder="***-***-****" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <input type="tel" name="mobile" id="mobile" class="form-control w-50 text-center" placeholder="***-***-****" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
             </div>
     
             <div class="form-group m-5 d-flex align-items-center justify-content-center" style="width: 50vw;">
                 <label for="password" class="w-25">Password :</label>
-                <input type="password" class="form-control w-50 text-center" style="z-index: -1;" name="password" id="password" placeholder="password" required>
+                <input type="password" class="form-control w-50 text-center" name="password" id="password" placeholder="password" required>
             </div>
     
             <div class="form-group m-5 d-flex align-items-center justify-content-center" style="width: 50vw;">
                     <label for="repeat-password" class="w-25" >Repeat Password :</label>
-                    <input type="password" class="form-control w-50 text-center" style="z-index: -1;" name="repeat_password" id="repeat-password" placeholder="repeat password" required>
+                    <input type="password" class="form-control w-50 text-center" name="repeat_password" id="repeat-password" placeholder="repeat password" required>
             </div>
     
             <div class="form-group form-login">

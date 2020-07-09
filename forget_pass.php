@@ -4,6 +4,18 @@ session_start();
 include "navbar.php";
 include "connection.php";
 
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+    
+// Load Composer's autoloader
+require 'vendor/autoload.php';
+    
+// Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
 
 $errors=[];
 
@@ -25,26 +37,37 @@ if (isset($_POST['submit'])) {
         $sql2 = "INSERT INTO password_reset(email, token) VALUES ('$email', '$token')";
         $result2 = mysqli_query($db, $sql2);
 
-        $to = $email;
-        $subject = "Reset Your Password at e-library";
-        $message  = "<html>
-                        <head>
-                            <title>Reset Your Password</title>
-                        </head>
-                        <body>
-                            <p>Click on the link !</p>
-                            <a href=\"reset_pass.php?token=\" . $token>link</a>
-                        </body>
-                    </html>";
+        
 
-        $header = "From: <saayaanghosh@gmail.com>" . "\r\n";
-        $header .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        if(mail($to,$subject,$message,$header)){
-            echo "Email sent !";
-        } else {
-            echo "Email send failed !";
+        try {
+            //Server settings
+        
+            $mail->isSMTP();                                            // Send using SMTP
+            $mail->Host       = 'smtp-relay.sendinblue.com';                    // Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = 'info.at.e.library@gmail.com';                     // SMTP username
+            $mail->Password   = 'hJfrE0bU2LwQKT9G';                               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+        
+            //Recipients
+            $mail->setFrom('info.at.e.library@gmail.com', 'Online Library');
+            $mail->addAddress($email);     // Add a recipient
+        
+        
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Reset Your Password';
+            $mail->Body    = 'reset_pass.php?token=' . $token;
+            $mail->AltBody = 'Reset Password';
+        
+            $mail->send();
+            header("location: pending.php?email=" .$email);
+            echo 'Message has been sent';
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
-        // header("location: pending.php?email=" .$email);
+
 
     }
 
@@ -72,8 +95,8 @@ if (isset($_POST['submit'])) {
     <title>Reset Password</title>
 
 </head>
-<body style="height: 100vh; width: 100vw;" class="text-center">
-    <div class="form border-0 rounded-top rounded-bottom shadow rounded bg-grey h-75 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 25%;">
+<body style="height: 100vh; width: 100vw; background-image: url('carousel/passwordforgot.jpg')" class="text-center">
+    <div class="form text-light position-relative d-flex flex-column justify-content-center align-items-center" style="top: 17.5%; left: 19.2%; height: 60vh; width: 25vw; background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
         <form action="" method="post">
             <div class="header">
                 <h3 class="form-title">Reset Password</h3>

@@ -9,11 +9,7 @@
 /**for navigation bar**/
 
 
-body {
-	
-	background-image: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
 
-}
 
 nav {
 	display: flex;
@@ -88,6 +84,7 @@ a:active, a:focus {
 	}
 	.nav-links {
 		position: absolute;
+		z-index: 1;
 		right: 0px;
 		height: 90vh;
 		top: 10vh;
@@ -139,13 +136,6 @@ a:active, a:focus {
 
 /*   design for books page    */
 
-.search-bar {
-	position: fixed;
-	top: 15vh;
-	right: 10vh;
-	z-index: 1;
-}
-
 .search-bar input {
 	padding: 3px;
 }
@@ -158,6 +148,3 @@ a:active, a:focus {
 	position: relative;
 	top: 0;
 }
-
-
-

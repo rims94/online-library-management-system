@@ -54,8 +54,8 @@
     <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
     <title>Log IN</title>
 </head>
-<body style="height: 100vh; width: 100vw;" class="text-center">
-    <div class="border-0 rounded-top rounded-bottom shadow rounded bg-grey form-container h-75 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 7.5%;">
+<body style="height: 100vh; width: 100vw; background-image: url('carousel/sign_in.jpg')" class="text-center">
+    <div class="border rounded border-light text-light form-container position-relative d-flex flex-column justify-content-center align-items-center" style="top: 17.5%; left: 12.5%; width: 40vw; height: 50vh; background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
         <form class="form w-100 h-75" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <?php $error ?>
             <div class="header"><h1>Log In Here</h1></div>

@@ -59,10 +59,10 @@ if (isset($_POST['submit'])) {
     
     <title>Reset Password</title>
 </head>
-<body style="height: 100vh; width: 100vw;" class="text-center">
+<body style="height: 100vh; width: 100vw; background-image: url('carousel/forgotpassword.jpg')" class="text-center">
 
 
-    <div class="form border-0 rounded-top rounded-bottom shadow rounded bg-grey h-75 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 25%;">
+    <div class="form border rounded border-light position-relative d-flex flex-column justify-content-center align-items-center text-light" style="top: 20%; left:19.2%; width: 30vw; height:50vh; background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
         <form action="" method="post">
             <div class="header">
                 <h3 class="form-title">Reset Password</h3>

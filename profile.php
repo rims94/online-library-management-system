@@ -76,7 +76,7 @@
     
     </head>
     
-    <body>
+    <body style="background-image: url('carousel/sign_in.jpg')">
         <div class="edit-profile">
 
             
@@ -86,7 +86,7 @@
 
 
                 <div class="header">
-                    <h4 class="text-center">My Profile</h4>
+                    <h4 class="text-center text-primary">My Profile</h4>
                 </div>
 
 

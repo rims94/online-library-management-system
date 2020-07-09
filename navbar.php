@@ -31,6 +31,7 @@ session_start();
         <li>
           <a href="profile.php">
             <div class="user">
+            <i class="fas fa-user-circle" style="font-size: 16px;"></i>
               <?php 
 
               $email = $_SESSION['user'];
@@ -46,7 +47,7 @@ session_start();
       <?php
       } else if(isset($_SESSION['admin'])){
       ?>
-        <li><a href="update_student.php">Update</a></li>
+        <li><a href="update_student.php">Students</a></li>
         <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> LogOut</a></li>
       <?php
       } else {

@@ -44,52 +44,54 @@
 
     <title>Users Details</title>
 </head>
-<body>
+<body style="height: 100vh; width: 100vw; background-image: url('carousel/sign_in.jpg')">
 
-    <div class="search-bar">
-        <form name="book-search" method="post">
+    <div class="student d-flex flex-column justify-content-center align-items-center">
+        <div class="search-bar">
+            <form name="book-search" method="post">
+
+            <input type="search" name="search" id="search" placeholder="type student name" class="text-center" required>
+            <button type="submit" name="submit" class="btn">
+                <span>
+                    <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="#fdfdfe" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+                        <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+                    </svg>
+                </span>
+            </button>
+
+            </form>
+        </div>
         
-        <input type="search" name="search" id="search" placeholder="type student name" class="text-center" required>
-        <button type="submit" name="submit" class="btn">
-            <span>
-                <svg class="bi bi-search" width="1em" height="1em" viewBox="0 0 16 16" fill="#fdfdfe" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
-                    <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
-                </svg>
-            </span>
-        </button>
         
-        </form>
-    </div>
-    
-    
-    <div class="table-responsive">
-        <div class="header"><h1>List of Users</h1></div>
-        <table class="table table-bordered table-hover table-striped">
-            <thead class="table-dark">
-                <tr>
-                    <th class="text-center">FirstName</th>
-                    <th class="text-center">LastName</th>
-                    <th class="text-center">Email</th>
-                    <th class="text-center">Mobile</th>
-                </tr>
-            </thead>
-            <?php while($array=mysqli_fetch_row($result)) { ?>
-            <tbody class="table-light">
-                   
-                <tr>
-                    <td class="text-center"><?=$array[0]?></td>
-                    <td class="text-center"><?=$array[1]?></td>
-                    <td class="text-center"><?=$array[2]?></td>
-                    <td class="text-center"><?=$array[3]?></td>
-                </tr>
+        <div class="table-responsive">
+            <div class="header"><h1>List of Users</h1></div>
+            <table class="table table-bordered table-hover table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th class="text-center">FirstName</th>
+                        <th class="text-center">LastName</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Mobile</th>
+                    </tr>
+                </thead>
+                <?php while($array=mysqli_fetch_row($result)) { ?>
+                <tbody class="table-light">
+
+                    <tr>
+                        <td class="text-center"><?=$array[0]?></td>
+                        <td class="text-center"><?=$array[1]?></td>
+                        <td class="text-center"><?=$array[2]?></td>
+                        <td class="text-center"><?=$array[3]?></td>
+                    </tr>
+
+                    <?php } ?>
+                    <?php mysqli_free_result($result); ?>
+                    <?php mysqli_close($db); ?>
+                </tbody>
                 
-                <?php } ?>
-                <?php mysqli_free_result($result); ?>
-                <?php mysqli_close($db); ?>
-            </tbody>
-           
-        </table>
+            </table>
+        </div>
     </div>
 </body>
 </html>

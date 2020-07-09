@@ -1,18 +1,23 @@
 <?php
 
 include "navbar.php";
-if (isset($_POST['submit'])) {
-    $email = $_POST['email'];
-    $msg = $_POST['story'];
-    include "connection.php";
-    $sql = "INSERT INTO feedbacks(Email, Message) VALUES ('$email','$msg')";
-    mysqli_query($db, $sql);
-?>
-    <script>
-        alert("<?php echo 'Thank you for your concern !'; ?>");
-    </script>
-<?php
 
+if(isset($_SESSION['user'])) {
+    if (isset($_POST['submit'])) {
+        $email = $_POST['email'];
+        $msg = $_POST['story'];
+        include "connection.php";
+        $sql = "INSERT INTO feedbacks(Email, Message) VALUES ('$email','$msg')";
+        mysqli_query($db, $sql);
+    ?>
+        <script>
+            alert("<?php echo 'Thank you for your concern !'; ?>");
+        </script>
+    <?php
+    
+    }
+} else {
+    header('location: login.php');
 }
 
 
@@ -63,17 +68,17 @@ if (isset($_POST['submit'])) {
     
     <title>Feedback</title>
 </head>
-<body style="height:100vh; width: 100vw;" class="text-center">
-    <div class="feedback-form border-0 rounded-top rounded-bottom shadow rounded bg-grey h-75 position-relative d-flex flex-column justify-content-center align-items-center w-50" style="top: 10%; left: 7.5%;">
+<body style="height:100vh; width: 100vw; background-image: url('carousel/feedback.png')" class="text-center">
+    <div class="feedback-form border rounded border-light text-light position-relative d-flex flex-column justify-content-center align-items-center" style="top: 18%; left: 30%; height: 66vh; width: 40vw; background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
     <div class="header"><h4>Contact us !</h4></div>
         <form method="post">
             <div class="email form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="email" class="w-25">Email : </label>
-                <input type="email" name="email" id="email" placeholder="Your mail id" class="form-control w-50 text-center" style="z-index: -1;" required>
+                <input type="email" name="email" id="email" placeholder="Your mail id" class="form-control w-50 text-center"  required>
             </div>
             <div class="message form-group m-5 d-flex justify-content-center align-items-center" style="width: 50vw;">
                 <label for="story" class="w-25">Tell us your story:</label>
-                <textarea id="story" name="story" rows="5" cols="33" class="form-control w-50 text-center" style="z-index: -1;" required></textarea>
+                <textarea id="story" name="story" rows="5" cols="33" class="form-control w-50 text-center" required></textarea>
             </div>
             <div class="submit form-group">
                 <button type="submit" name="submit" id="submit" class="btn btn-lg btn-primary">

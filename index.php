@@ -27,7 +27,7 @@ include "navbar.php";
     
     <title>Online Library Management System</title>
 </head>
-<body style="height: 100vh; width: 100vw;" class="text-center">
+<body style="height: 100vh; width: 100vw; background-color: #bdcad9; background-image: linear-gradient(315deg, #bdcad9 0%, #e1dada 74%);" class="text-center">
 
     
     <!-- Carousel -->
@@ -42,16 +42,18 @@ include "navbar.php";
             <li data-target="#demo" data-slide-to="1"></li>
             <li data-target="#demo" data-slide-to="2"></li>
             <li data-target="#demo" data-slide-to="3"></li>
+            <li data-target="#demo" data-slide-to="4"></li>
         </ul>
 
         
         <!-- The SlideShow -->
 
         <div class="carousel-inner">
-            <div class="carousel-item active"><img src="carousel/1.jpg" alt="1st"></div>
-            <div class="carousel-item"><img src="carousel/2.jpg" alt="2nd"></div>
-            <div class="carousel-item"><img src="carousel/3.jpg" alt="3rd"></div>
-            <div class="carousel-item"><img src="carousel/4.jpg" alt="4th"></div>
+            <div class="carousel-item active"><img src="carousel/1000*586.jpg" alt="1st"></div>
+            <div class="carousel-item"><img src="carousel/1024*683.jpg" alt="2nd"></div>
+            <div class="carousel-item"><img src="carousel/1152*768.jpg" alt="3rd"></div>
+            <div class="carousel-item"><img src="carousel/1920*1080.jpg" alt="4th"></div>
+            <div class="carousel-item"><img src="carousel/2048*1152.jpg" alt="5th"></div>
         </div>
 
         
